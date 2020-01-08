@@ -14,6 +14,9 @@ class ViewGarzon extends Component {
         <Pizzas />
         <Picoteos />
         <Shops />
+
+        <NewOrder />
+
       </div>
 
     )

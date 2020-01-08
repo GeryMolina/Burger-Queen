@@ -1,9 +1,7 @@
-
 import React, { Component } from 'react';
 import firebase from 'firebase';
 import 'firebase/firebase-database';
 import BtnMenu from '../atoms/BtnMenu';
-import OrderItem from './OrderItems';
 
 
 
@@ -127,88 +125,3 @@ class NewOrder extends Component {
 
 
 export default NewOrder;
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-class NewOrder extends Component {
-  constructor() {
-    super();
-    this.state = {
-      order: [],
-      table: "",
-    }
-
-    this.NewOrder = firebase.initializeApp(fire);
-    this.db = this.app.database().ref().child('orders');
-
-    this.addOrder = this.addOrder.bind(this);
-  }
-
-
-  componentDidMount() {
-    const { order } = this.state;
-    this.db.on('child_added', snap => {
-      order.push({
-        orderId: snap.key,
-      })
-      this.setState({order});
-    });
-  }
-
-  addOrder(order) {
-   this.db.push().set({orderContent: order});
-  }
-
-  removeOrder() {
-
-  }
-
-
-  render() {
-    return (
-      <div>
-        <Pizzas />
-      </div>
-    )
-  }
-}
-
-*/
-
-
-
-
-
-
-
-/*
-class NewOrder extends Component {
-  constructor(props) {
-    super(props);
-    this.orderId = props.orderId;
-    this.orderContent = props.orderContent;
-  }
-
-  render() {
-    return (
-      <div className="Order">
-        <li>{this.orderId} - {this.orderContent}</li>
-      </div>
-    )
-  }
-}
-
-export default NewOrder;
-*/
-
-
